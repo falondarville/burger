@@ -37,3 +37,19 @@ h4 {
 	list-style: none !important;
 }
 
+.input-lg {
+	border: none;
+}
+
+#submit-button {
+	border-radius: 5px;
+	width: 25%;
+	height: 40px;
+	border: 2px solid #EE7600;
+	color: #EE7600;
+}
+
+#submit-button:hover {
+	background-color: #EE7600;
+	color: white;
+}

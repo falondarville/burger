@@ -13,4 +13,11 @@ router.get('/', function(request, response){
 	});
 });
 
+router.post('/'), function(request, response){
+	burgers.create(['burger'], [req.body.burger], function(result){
+		
+		// response.json({})
+	})
+}
+
 module.exports = router;

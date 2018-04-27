@@ -16,9 +16,10 @@
 	</div>
 
 <!-- container where burgers will dynamically populate -->
+<!-- 2 columns: burgers input into the form below and burgers devoured -->
 	<div class="burger-container">
 		<ul>
-  			{{#each burger}}
+  			{{#each burgers}}
   			{{/each}}
 		</ul>
 	</div>
@@ -31,11 +32,11 @@
 			
 				<form class="create-form">
 		  			<div class="form-group">
-		    			<label for="ca">Burger Name:</label>
-		    			<input class="input-lg form-control" type="text" id="ca" name="name">
+		    			<label for="ca">Enter the name of the burger that you would like below: </label>
+		    			<input class="input-lg form-control" type="text" id="ca" name="burger">
 		  			</div>
 
-		  			<button type="submit">Eat burger</button>
+		  			<button id="submit-button" type="submit">Eat burger</button>
 				</form>
 			</div>
 			<div class="col-md-4 idea-list">
@@ -54,9 +55,3 @@
 	</div>
 
 </div>
-
-
-
-
-
-
