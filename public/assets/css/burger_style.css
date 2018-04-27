@@ -2,7 +2,38 @@ body {
 	background-color: #FFC966;
 }
 
+a {
+	color: #EE7600;
+}
+
+h4 {
+	color: #EE7600;
+}
+
 .header-container {
 	margin-top: 40px;
+}
+
+.center-element {
 	text-align: center;
 }
+
+.form-container {
+	border: 2px solid black;
+	text-align: center;
+	padding: 20px;
+}
+
+#cow-image {
+	max-height: 300px;
+}
+
+#head-list {
+	font-weight: bold;
+}
+
+.idea-list ul {
+	text-align: left;
+	list-style: none !important;
+}
+
