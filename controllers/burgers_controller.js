@@ -4,9 +4,9 @@ const burgers = require('../models/burger.js')
 
 // create router and export 
 router.get('/', function(request, response){
-	burgers.all(function(data){
+	burgers.all(function(burgers){
 		var hbsObject = {
-			burgers: data
+			burgers: burgers
 		};
 		console.log(hbsObject)
 		response.render('index', hbsObject);

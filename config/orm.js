@@ -1,13 +1,11 @@
 var connection = require('../config/connection.js');
 
 var orm = {
-	all: function(tableInput, cb) {
+	all: function(tableInput, callBack) {
 		var queryString = 'SELECT * FROM ' + tableInput + ';';
 		connection.query(queryString, function(error, result){
-			if (error){
-				throw error;
-		}
-		cb(result);
+			if (error) throw error;
+			callBack(result);
 	});
 }
 };

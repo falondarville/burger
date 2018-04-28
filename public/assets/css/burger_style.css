@@ -34,11 +34,15 @@ h4 {
 
 .idea-list ul {
 	text-align: left;
-	list-style: none !important;
+	list-style: none;
 }
 
 .input-lg {
 	border: none;
+}
+
+.individual-burger{
+	list-style: none;
 }
 
 #submit-button {
