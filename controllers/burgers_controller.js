@@ -4,7 +4,7 @@ const burgers = require('../models/burger.js')
 
 // create router and export 
 router.get('/', function(request, response){
-	burgers.all(function(burgers){
+	burgers.selectAll(function(burgers){
 		var hbsObject = {
 			burgers: burgers
 		};
