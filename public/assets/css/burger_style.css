@@ -22,6 +22,7 @@ h4 {
 	border: 2px solid black;
 	text-align: center;
 	padding: 20px;
+	margin-bottom: 20px;
 }
 
 #cow-image {
@@ -56,4 +57,10 @@ h4 {
 #submit-button:hover {
 	background-color: #EE7600;
 	color: white;
+}
+
+.btn-light {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 10px;
 }
