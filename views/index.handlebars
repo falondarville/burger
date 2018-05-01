@@ -23,7 +23,7 @@
 				<hr>
 				<ul>
   					{{#each burgers}}
-  					<li class="individual-burger">{{ this.burger_name }} <button class="btn btn-light">Eat it</button></li>
+  					<li class="individual-burger">{{ this.burger_name }} <button class="btn btn-light eat-button data-id='{{id}}">Eat it</button></li>
   					{{/each}}
 				</ul>
 			</div>
@@ -45,7 +45,7 @@
 				<form class="create-form">
 		  			<div class="form-group">
 		    			<label for="burger_name">Enter the name of the burger that you would like below: </label>
-		    			<input class="input-lg form-control" type="text" name="burger">
+		    			<input class="input-lg form-control" type="text" id="ca" name="burger">
 		  			</div>
 
 		  			<button id="submit-button" type="submit">Add burger</button>

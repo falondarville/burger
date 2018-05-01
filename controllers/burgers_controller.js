@@ -1,5 +1,7 @@
 const express = require('express');
+
 const router = express.Router();
+
 const burgers = require('../models/burger.js')
 
 // create router and export 
@@ -13,11 +15,15 @@ router.get('/', function(request, response){
 	});
 });
 
-router.post('/'), function(request, response){
+router.post('/api/burgers'), function(request, response){
 	burgers.create(['burger'], [req.body.burger], function(result){
 		
-		// response.json({})
-	})
+		response.json({ id: result.insertId });
+	});
 }
+
+// router.put('/api/burgers/:id', function(request, response){
+	
+// })
 
 module.exports = router;
