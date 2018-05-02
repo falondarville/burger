@@ -8,8 +8,12 @@ var burgers = {
 		});
 	},
 	insertOne: function(value, callBack) {
-		// how do I move the value from form to here?
 		orm.insertOne('burgers', 'burger_name', value, function(response){
+			callBack(response);
+		})
+	},
+	updateOne: function(value, id, callBack) {
+		orm.updateOne('burgers', 'burger_name', value, id, function(response){
 			callBack(response);
 		})
 	}

@@ -14,14 +14,14 @@ var orm = {
 			if (error) throw error;
 			callBack(result);
 		})
+	},
+	updateOne: function(tableInput, columnName, value, id, callBack){
+		var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?"
+		connection.query(queryString, [tableInput, columnName, value, id], function(error, result){
+			if (error) throw error;
+			callBack(result);
+		})
 	}
-	// updateOne(): function(tableInput, columnName, value, id, callBack){
-	// 	var queryString = "UPDATE ?? SET ?? = ? WHERE id = ?"
-	// 	connection.query(queryString, function(error, result){
-	// 		if (error) throw error;
-	// 		callBack(result);
-	// 	})
-	// }
 };
 
 // export orm containing functions
