@@ -8,12 +8,13 @@ var burgers = {
 		});
 	},
 	insertOne: function(value, callBack) {
+		console.log(value);
 		orm.insertOne('burgers', 'burger_name', value, function(response){
 			callBack(response);
 		})
 	},
 	updateOne: function(value, id, callBack) {
-		orm.updateOne('burgers', 'burger_name', value, id, function(response){
+		orm.updateOne('burgers', 'devoured', value, id, function(response){
 			callBack(response);
 		})
 	}

@@ -1,29 +1,23 @@
+$(document).ready(function() {
+  $(".eat-button").on("click", function(event) {
 
-  // $(".eat-button").on("click", function(event) {
-  //   var id = $(this).data("id");
-  //   var newEatenState = $(this).data("devoured");
+    var id = $(this).data("id");
 
-  //   var newEatenState = {
-  //     devoured: true
-  //   };
+    // Send the PUT request.
+    $.ajax("/api/burgers/" + id, {
+      type: "PUT",
+      data: {devoured: 1}
+    }).then(
+      function() {
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
 
-  //   // Send the PUT request.
-  //   $.ajax("/api/burgers/" + id, {
-  //     type: "PUT",
-  //     data: newEatenState
-  //   }).then(
-  //     function() {
-  //       console.log("changed eaten state to", newEatenState);
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
-
-$("#submit_button").on("submit", function(event) {
+$("#submit-button").on("click", function(event) {
  
   event.preventDefault();
-
   var newBurger = {
     burger_name: $("#burger_input").val().trim()
   };
@@ -34,11 +28,12 @@ $("#submit_button").on("submit", function(event) {
     data: newBurger
   }).then(
     function() {
-      console.log(newBurger);
-      console.log("created new burger");
       // Reload the page to get the updated list
       location.reload();
     }
   );
 });
+
+});
+
 

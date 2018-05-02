@@ -23,14 +23,20 @@
 				<hr>
 				<ul>
   					{{#each burgers}}
-  					<li class="individual-burger">{{ this.burger_name }} <button class="btn btn-light eat-button data-id='{{id}}">Eat it</button></li>
+  						{{#unless devoured}}
+  							<li class="individual-burger">{{ this.burger_name }} <button class="btn btn-light eat-button" data-id="{{ this.id }}">Eat it</button></li>
+  						{{/unless}}
   					{{/each}}
 				</ul>
 			</div>
 			<div class="col-md-6">
 				<h3>Burgers eaten</h3>
 				<hr>
-				{{!-- this is where the devoured burgers go --}}
+				{{#each burgers}}
+					{{#if devoured}}
+					<li class="individual-burger">{{ this.burger_name }} </li>
+					{{/if}}
+				{{/each}}
 			</div>
 		</div>
 
@@ -41,15 +47,13 @@
 		<div class="row">
 			<div class="col-md-8 center-element">
 				<h2>Add a burger</h2>
-			
-				<form class="create-form">
+		
 		  			<div class="form-group">
 		    			<label for="burger_name">Enter the name of the burger that you would like below: </label>
 		    			<input class="input-lg form-control" id="burger_input" type="text" name="burger">
 		  			</div>
 
-		  			<button id="submit-button" type="submit">Add burger</button>
-				</form>
+		  			<button id="submit-button">Add burger</button>
 			</div>
 			<div class="col-md-4 idea-list">
 				<ul>
