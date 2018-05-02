@@ -6,7 +6,7 @@ This application was deployed to Heroku:
 
 [Use the Application Here](https://safe-woodland-79086.herokuapp.com/)
 
-![Alt text]('/assets/img/burger.gif')
+![Alt text]('./public/assets/img/burger.gif')
 
 ## Technologies and Methods Used
 JavaScript, HTML/CSS, Express, Node, Handlebars (express-handlebars npm package), MVC
